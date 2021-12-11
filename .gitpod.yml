@@ -1,0 +1,13 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: |
+      sudo apt-get update && sudo apt-get -y upgrade
+      sudo apt-get -y install firefox
+      wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz && tar -xvzf geckodriver-v0.30.0-linux64.tar.gz && rm geckodriver-v0.30.0-linux64.tar.gz
+      pip install -r requirements.txt
+    command: echo 'start script'
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 8000
+    onOpen: open-preview
