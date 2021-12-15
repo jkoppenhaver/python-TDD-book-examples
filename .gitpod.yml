@@ -5,7 +5,7 @@ tasks:
       sudo apt-get -y install firefox
       wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz && tar -xvzf geckodriver-v0.30.0-linux64.tar.gz && rm geckodriver-v0.30.0-linux64.tar.gz
       pip install -r requirements.txt
-    command: python manage.py runserver
+    command: python manage.py runserver &
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
